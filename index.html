@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>デモ - fancyBox iframe側のHTMLに記述したクローズボタンを機能させる</title>
+	<link rel="stylesheet" href="assets/lib/cssreset-min.css"/>
+	<link rel="stylesheet" href="assets/lib/fancybox/jquery.fancybox.css">
+	<style type="text/css">
+		html {
+			width: 320px;
+			height: 444px;
+		}
+		body {
+			height: 100%;
+			font-family: Verdana, Arial, sans-serif;
+			font-size: 12px;
+			color: #333333;
+		}
+		#container {
+			padding: 5px;
+			line-height: 24px;
+		}
+	</style>
+</head>
+<body>
+
+<div id="container">
+	<ul>
+		<li><a href="default.html" data-fancybox-type="iframe" class="fancybox">デフォルトデザイン</a></li>
+		<li><a href="original.html" data-fancybox-type="iframe" class="fancybox-original">iframe側のHTMLに記述したオリジナルのクローズボタン</a></li>
+		<li><a href="http://mawatari.jp/archives/fancybox-original-close-button-within-an-iframe">このデモを紹介したブログ</a></li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="assets/lib/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="assets/lib/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('a.fancybox').fancybox({
+			autoSize: false,
+			width: 250,
+			height: 374,
+			topRatio: 0,
+			leftRatio: 0
+		});
+		$('a.fancybox-original').fancybox({
+			autoSize: false,
+			width: 280,
+			height: 404,
+			padding: 0,
+			topRatio: 0,
+			leftRatio: 0,
+			closeBtn: false
+		});
+	});
+</script>
+</body>
+</html>

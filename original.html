@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>デモ - fancyBox iframe側のHTMLに記述したクローズボタンを機能させる</title>
+	<link rel="stylesheet" href="assets/lib/cssreset-min.css"/>
+	<style type="text/css">
+		html {
+			width: 270px;
+			height: 394px;
+		}
+		body {
+			height: 100%;
+			font-family: Verdana, Arial, sans-serif;
+			font-size: 12px;
+			color: #333333;
+		}
+		#container {
+			width: 270px;
+			height: 394px;
+			border: 5px solid #78CD51;
+		}
+		#header {
+			width: 270px;
+			height: 25px;
+		}
+		#close-btn {
+			width: 60px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			border-radius: 0 0 4px 4px;
+			margin-left: 180px;
+			background-color: #78CD51;
+			color: #ffffff;
+			text-shadow: 0 0 1px #000000;
+		}
+		#main {
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+
+<div id="container">
+	<div id="header">
+		<div id="close-btn">close</div>
+	</div>
+	<div id="main">オリジナルデザイン</div>
+</div>
+
+<script type="text/javascript" src="assets/lib/jquery-2.0.0.min.js"></script>
+<script type="text/javascript">
+	$('#close-btn').click(function(){
+		parent.$.fancybox.close();
+	});
+</script>
+</body>
+</html>
